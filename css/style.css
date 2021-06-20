@@ -21,13 +21,17 @@ body {
     
 }
 
+
+
 .logo {
-    font-family: copperplate gothic bold, serif;
+    font-family: 'Cinzel', serif;    
     font-weight: bold;
     font-size: 18px;
     padding-left: 1em;
 }
-/* nav */
+
+
+/* Header/nav */
 header {
     background-color: #3F2318;
   display: flex;
@@ -38,8 +42,6 @@ nav li{
     display: inline-block;
     margin-left: 5em;
     font-size: 20px;
-
-   
 }
 
 nav {
@@ -53,8 +55,18 @@ nav ul {
 
 nav a {
     padding: 22px;
-    text-decoration: none;;
+    text-decoration: none;
 }
+
+.hamburger {
+    background-color: #736565;
+    display: none;
+}
+#hamburger-menu {
+    display: none;
+  }
+
+
 /* Links */
 a {
     color: white;
@@ -74,20 +86,19 @@ nav li:hover {
   text-decoration: underline;
 }
 
-/* Homepage */
+/* Pages */
 .welcome {
     background-color: #778C88;
     text-align: center;
-
 }
 
   .overview {
       background-color: #2E403B;
       text-align: center ;
       padding-top: 8em;
-      padding-bottom: 8em;     
-      
+      padding-bottom: 8em;       
   }
+
 .overview a {
     margin: 1em;
 }
@@ -97,21 +108,11 @@ footer {
     padding: 30px;
 }
 
-.hamburger {
-    background-color: #736565;
-    display: none;
-}
-#hamburger-menu {
-    display: none;
-  }
-
-/* Locations */
 
 .headline {
     padding:20px;
     text-align: center;
 }
-
 
 .locations {
     text-align: center;
@@ -132,13 +133,7 @@ footer {
 }
 
 
-
-
-
-
-
-
-/* MEDIA QUERIES */
+/* Media queries */
 @media screen and (max-width: 1650px) {
    
 .overview a {
@@ -193,15 +188,13 @@ a img {
           background: #736565;
           right: 0px;
         }
-        
-  
-
+    
     nav li {
         padding: 5px 10px;
         display: flex;
         flex-direction: column;
-
     }
+
     .hamburger {
         display: inline-block;
         padding: 20px;
@@ -209,15 +202,12 @@ a img {
         margin-left: 20px;
         font-size: 25px;
         text-align: center;
-
       }
 
     #hamburger-menu:checked ~ nav {
        display: block;
         }
        
-       
-        
       header {
           justify-content: space-between
       }
@@ -226,7 +216,6 @@ a img {
           padding-left: 1em;
       }
       
-    
         a img {
             max-width: 300px;
            }
