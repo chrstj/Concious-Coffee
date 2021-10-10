@@ -62,12 +62,14 @@ nav ul {
 nav a {
     padding: 22px;
     text-decoration: none;
+
 }
 
 .hamburger {
     background-color: #736565;
     display: none;
 }
+
 #hamburger-menu {
     display: none;
   }
@@ -201,8 +203,6 @@ button {
 }
 
 
-
-
 /* Media queries */
 @media screen and (max-width: 1650px) {
    
@@ -247,7 +247,15 @@ button {
     }
 }
 
-@media screen and (max-width: 950px ) {
+@media screen and (max-width: 1000px ) {
+    .images {
+        max-width: 300px;
+    }
+    nav li {
+        margin-left: 1px;
+    }
+}
+@media screen and (max-width: 800px ) {
     nav {
         margin-left: 25px;
         display: none;
