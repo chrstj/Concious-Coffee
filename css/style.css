@@ -136,6 +136,14 @@ footer {
     padding-bottom: 2em;    
 }
 
+.image img {
+    max-width: 800px;
+    max-height: 600px;
+}
+
+.image p {
+    text-align: center;
+}
 .text {
     text-align: center;
     padding-top: 1em;
@@ -143,20 +151,24 @@ footer {
 }
 
 /* Product Page */
-.cart {
-    display:none;
-}
+
 .products {
-display: inline-block;
-margin-left: 5em;
+display: flex;
+justify-content: space-evenly;
+text-align: center;
+background-color: #2E403B;
 }
 
 .products img {
-    width: 150px;
+    width: 250px;
+    height: 250px;
 }
 
-.products p{
+.product-specific {
+display: flex;
+justify-content: center;
 text-align: center;
+background-color: #2E403B;
 }
 
 .coffeeBeans {
@@ -174,12 +186,13 @@ text-align: center;
 
 form {
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: 600px;
     justify-content: center;
 }
 
 input {
     margin-top: 4px; 
+    padding: 10px;
 }
 .form-error {
     display: none;
