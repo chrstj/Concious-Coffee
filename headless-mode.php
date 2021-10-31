@@ -12,7 +12,7 @@
  */
 
 if( ! defined( 'HEADLESS_MODE_CLIENT_URL' ) ) {
-	define( 'HEADLESS_MODE_CLIENT_URL', 'https://www.floewerpoewer.one' );
+	define( 'HEADLESS_MODE_CLIENT_URL', 'https://hiroy.club' );
 };
 
 /**
@@ -35,7 +35,7 @@ add_action( 'admin_menu', 'headless_mode_settings' );
 
 function headless_mode_settings_output() {
 
-	$clientUrl = HEADLESS_MODE_CLIENT_URL !== 'https://www.floewerpoewer.one' ? HEADLESS_MODE_CLIENT_URL : false;
+	$clientUrl = HEADLESS_MODE_CLIENT_URL !== 'https://hiroy.club' ? HEADLESS_MODE_CLIENT_URL : false;
 	
 	?>
 		<div class="wrap">
@@ -50,8 +50,8 @@ function headless_mode_settings_output() {
 	   			echo __( 'Your site is not redirecting.', 'headless-mode' );
 	   		} ?></code>
 			<p> <?php _e( 'Add the following to your wp-config.php file to redirect all traffic to the new front end of the site (change the URL before pasting!):', 'headless-mode' ); ?>
-			<p> <code> define( 'HEADLESS_MODE_CLIENT_URL', 'https://www.floewerpoewer.one' );</code></p>
-			<p> <em> <?php _e( 'If after saving the wp-config.php file, your site is still not redirecting, make sure you\'ve replaced <code>https://www.floewerpoewer.one</code> above with your front end web address.', 'headless-mode' ); ?> </em></p>
+			<p> <code> define( 'HEADLESS_MODE_CLIENT_URL', 'https://hiroy.club' );</code></p>
+			<p> <em> <?php _e( 'If after saving the wp-config.php file, your site is still not redirecting, make sure you\'ve replaced <code>https://hiroy.club</code> above with your front end web address.', 'headless-mode' ); ?> </em></p>
 		</div>
 
 	<?php
@@ -66,7 +66,7 @@ function headless_mode_settings_output() {
  */
 function headless_mode_redirect($url, $permanent = false)
 {
-	if ( HEADLESS_MODE_CLIENT_URL ==='https://www.floewerpoewer.one' ){
+	if ( HEADLESS_MODE_CLIENT_URL ==='https://hiroy.club' ){
 		return;
 	}
 
@@ -109,7 +109,7 @@ function headless_mode_disable_front_end() {
 		! defined( 'DOING_CRON' ) &&
 		! defined( 'REST_REQUEST' ) &&
 		// prevents the case of a new user activating the plugin but not yet setting the constant. Added in 0.3.0
-		HEADLESS_MODE_CLIENT_URL !== 'https://www.floewerpoewer.one' &&
+		HEADLESS_MODE_CLIENT_URL !== 'https://hiroy.club' &&
 		! is_admin() &&
 		(
 			empty( $wp->query_vars['rest_oauth1'] ) &&
